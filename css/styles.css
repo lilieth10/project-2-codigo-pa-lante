@@ -1,8 +1,7 @@
 /* En este archivo escriban su CSS */
-
-/* Fonts */
 /* Importar aquí la font */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2? family= Lato & display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
 
 /* Reset */
 * {
@@ -28,26 +27,12 @@ a {
 *  el margin: auto; para tenerlo centrado fácilmente ;)
 */
 
-@media (max-width: 767px) {
-    main {
-        padding-top: 60px;
-    }
-
-    #inicio h1 {
-        color: #000000; /* Aplicar color de texto */
-    }
-
-    #Contacto {
-        background-color: #f3c1d3; /* Mantener el fondo rosado */
-    }
-}
-
-main {
-    max-width: 1200px;
-    margin: auto;
-}
-
+/* Estilos comunes para dispositivos móviles y de escritorio */
 body {
+    background-image: url(https://img.freepik.com/foto-gratis/vista-navegador-codigo-html-sitio-web-impresa-papel-blanco-vista-cerca_211682-164.jpg?w=2000);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     font-family: 'lato', sans-serif;
     font-size: 18px;
     line-height: 1.2;
@@ -55,22 +40,23 @@ body {
     color: #0f0f0f;
 }
 
-h1 {
+section article {
+    background-color: #f6a4e3;
+}
+
+.title-container h1 {
     font-size: 36px;
+    color: #d114a8;
+}
+
+.title-container h2 {
+    font-size: 28px;
+    color: #d114a8;
     text-align: center;
 }
 
-section article {
-    background-color: #f3c1d3;
-    color: #000000;
-}
-
-h2 {
-    font-size: 28px;
-}
-
 p {
-    margin: 20px 0px;
+    margin: 15px 0px;
 }
 
 img {
@@ -91,7 +77,7 @@ header {
 }
 
 .logo {
-    width: 120px;
+    width: 90px;
 }
 
 .menu {
@@ -116,25 +102,17 @@ section {
 #inicio {
     justify-content: space-around;
     background-color: transparent; /* Quitar el fondo rosado */
-}
-
-#inicio h1 {
-    background-color: transparent; /* Quitar el fondo rosado */
-    color: #000000; /* Aplicar color de texto */
-}
-
-#inicio p {
-    background-color: transparent; /* Quitar el fondo rosado */
+    flex-direction: row;
 }
 
 #Contacto {
-    background-color: #f3c1d3; /* Mantener el fondo rosado */
+    background-color: #dd39c5; /* Mantener el fondo rosado */
 }
 
 .presentacion-img {
     margin-bottom: 20px;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     overflow: hidden;
 }
@@ -147,21 +125,27 @@ section {
 }
 
 .presentacion {
-    text-align: center;
-    width: 100%;
+    text-align: left;
+    width: 50%;
 }
 
 .btn-cv {
-    background-color: #79f3aa;
+    background-color: #f549d0;
+    color: #fbfbfb;
     padding: 12px 20px;
     border-radius: 50px;
     font-size: 20px;
     margin-top: 20px;
 }
 
+.btn-cv:hover {
+    background-color: #f41ec6;
+    transition: 0.4;
+}
+
 footer {
     text-align: center;
-    background-color: #f3c1d3;
+    background-color: #f099e0e0;
     padding: 16px;
     color: white;
 }
@@ -170,6 +154,7 @@ footer {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+   
 }
 
 .social-links li {
@@ -181,7 +166,42 @@ footer {
 }
 
 .social-links li a img {
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
+    width: 50px;
+    height: 40px;
+    margin-right: 10px;
+    background-color:#fa9febf6 ;
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media (max-width: 767px) {
+    main {
+        padding-top: 60px;
+    }
+
+
+    #Contacto {
+        background-color: #d534afae; /* Mantener el fondo rosado */
+    }
+}
+
+/* Estilos específicos para dispositivos de escritorio */
+@media (min-width: 768px) {
+    main {
+        width: 90%;
+    }
+
+    .menu li a:hover {
+        background-color: rgba(235, 86, 222, 0.59);
+    }
+}
+
+/* Estilos para los logos de contacto */
+.social-links li a:hover img {
+   background-color: #ef3dddee;
+   
+}
+
+/* Estilos para los enlaces "Inicio" y "Contacto" */
+.menu li a.clicked {
+    color: #e43ec0;
 }
