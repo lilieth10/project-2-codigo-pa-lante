@@ -1,20 +1,29 @@
-// Reemplaza el código JavaScript existente con el siguiente código
+// SELECCIONAR TODOS LOS ITEMS DEL MENU
+const menuItems = document.querySelectorAll('.menu li a');
 
-document.addEventListener("DOMContentLoaded", function() {
-  var enlaces = document.querySelectorAll(".menu li a");
+// Recorro la lista de nodos y detectar el click en todos ellos
+menuItems.forEach(function(item) {
+  item.addEventListener('click', function(event) {
+    event.preventDefault();
 
-  enlaces.forEach(function(enlace) {
-    enlace.addEventListener("click", function(event) {
-      event.preventDefault();
-
-      enlaces.forEach(function(enlace) {
-        enlace.classList.remove("clicked");
-      });
-
-      this.classList.add("clicked");
-
-      var target = document.querySelector(this.getAttribute("href"));
-      target.scrollIntoView({ behavior: 'smooth' });
+    // Quitar la clase "active" de todos los elementos del menú
+    menuItems.forEach(function(item) {
+      item.classList.remove('active');
     });
+
+    // Agregar la clase "active" al elemento que fue clickeado
+    this.classList.add('active');
+
+    // Obtener el ID del objetivo del enlace
+    const targetId = this.getAttribute('href').substring(1);
+
+    // Obtener el elemento objetivo por su ID
+    const target = document.getElementById(targetId);
+
+    // aca un Desplazamiento suave hacia el elemento objetivo
+    target.scrollIntoView({ behavior: 'smooth' });
   });
 });
+
+// clase "active" al elemento "Inicio" por defecto
+menuItems[0].classList.add('active');
