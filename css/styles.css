@@ -126,7 +126,7 @@ section {
 
 .presentacion {
     text-align: left;
-    width: 50%;
+    width: 100%;
 }
 
 .btn-cv {
@@ -136,6 +136,7 @@ section {
     border-radius: 50px;
     font-size: 20px;
     margin-top: 20px;
+    display: inline-block;
 }
 
 .btn-cv:hover {
@@ -172,32 +173,38 @@ footer {
     background-color:#fa9febf6 ;
 }
 
+/* Estilos comunes para dispositivos móviles y de escritorio */
+body {
+    background-image: url(https://img.freepik.com/foto-gratis/vista-navegador-codigo-html-sitio-web-impresa-papel-blanco-vista-cerca_211682-164.jpg?w=2000);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'lato', sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    background-color: #fbfbfb;
+    color: #0f0f0f;
+}
+.active {
+    color: #e43ec0;
+}
+
+/* ... */
+
 /* Estilos específicos para dispositivos móviles */
 @media (max-width: 767px) {
-    header {
-      padding: 10px;
-      height: 60px;
+    main {
+        padding-top: 60px;
     }
-  
-    .menu {
-      font-size: 16px;
-      margin-right: 10px;
+
+    #inicio {
+        flex-direction: column; /* Cambia a column */
     }
-  
-    .menu li a {
-      padding: 10px;
-    }
-  
-    .presentacion-img {
-      width: 150px;
-      height: 150px;
-    }
-  
-    .presentacion {
-      width: 100%;
-    }
-  }
-  
+
+    /* Estilos para el elemento activo en el menú */
+    
+}
+
 
 /* Estilos específicos para dispositivos de escritorio */
 @media (min-width: 768px) {
@@ -208,7 +215,12 @@ footer {
     .menu li a:hover {
         background-color: rgba(235, 86, 222, 0.59);
     }
+    #inicio {
+        flex-direction:column
+    }
+
 }
+
 
 /* Estilos para los logos de contacto */
 .social-links li a:hover img {
