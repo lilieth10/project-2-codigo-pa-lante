@@ -134,9 +134,12 @@ section {
     color: #fbfbfb;
     padding: 12px 20px;
     border-radius: 50px;
-    font-size: 20px;
-    margin-top: 20px;
+    font-size: 25px;
+    margin-top: 10px;
     display: inline-block;
+    
+
+    
 }
 
 .btn-cv:hover {
@@ -216,8 +219,9 @@ body {
         background-color: rgba(235, 86, 222, 0.59);
     }
     #inicio {
-        flex-direction:column
+        flex-direction: column;
     }
+
 
 }
 
